@@ -167,3 +167,9 @@ Nice way to create inputs that are more than 1 line.
 - first you create a textarea tag `<textarea></textarea>`
 - then we specify how big the text area is using the rows `rows` and columns `cols` attributes
 - and just like the other elements, if we wanted to send this data in a request, we would need to give it a name
+
+## Final Notes
+
+We can use the div tag `<div>` to give push things to a new line. This is done by putting div around the the block that is supposed to be on the same line.
+
+- not as much spacing as if there was a paragraph but that can be altered in CSS.
