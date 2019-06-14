@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Forum</title>
+    <title>Registration Form</title>
 </head>
 
 <body>
@@ -14,46 +14,72 @@
 
     <form>
 
-        <label for="username">Username</label>
-        <input id="username" type="text" placeholder="John" required>
-        <label for="password">Password</label>
-        <input id="password" type="text" placeholder="Smith" required>
+        <label for="first">First Name:</label>
+        <input name="first" id="first" type="text" placeholder="John" required>
+        <label for="last">Last Name:</label>
+        <input name="last" id="last" type="text" placeholder="Smith" required>
 
-        <p></p>
-        <label for="male">Male</label>
-        <input id="male" name="gender" type="radio">
-        <label for="female">Female</label>
-        <input id="female" name="gender" type="radio">
-        <label for="other">Other</label>
-        <input id="other" name="gender" type="radio">
+        <!-- the reason we can only select 1 is because of the name attribute in the input tag links them-->
+        <div>
+            <label for="male">Male</label>
+            <input id="male" name="gender" type="radio" value="male">
+            <label for="female">Female</label>
+            <input id="female" name="gender" type="radio" value"female">
+            <label for="other">Other</label>
+            <input id="other" name="gender" type="radio" value="other">
+        </div>
 
-        <p></p>
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="your email" required>
-        <label for="password">Password</label>
-        <input id="password" type="password" placeholder="your password" required>
+        <!-- name attribtures are used for purely just sending the data, dont change visual
+        what should we send the data in the request under, aka name=email-->
 
-        <p></p>
-        <label>Birthday</label>
-        <select name="month" placeholder="Month">
-            <option>Jan</option>
-            <option>Feb</option>
-            <option>Mar</option>
-        </select>
-        <select name="day" placeholder="Day">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-        </select>
-        <select name="year" placeholder="Year">
-            <option>1999</option>
-            <option>2000</option>
-            <option>2001</option>
-        </select>
+        <!-- for the password validation, pattern and title combo is the best-->
 
-        <p></p>
+        <!--the minlength and maxlength attributes to use for the input validation. This method has less browser support than the pattern attribute.-->
+        <div>
+            <label for="email">Email:</label>
+            <input name="email" id="email" type="email" placeholder="your email" required>
+            <!-- required for email auto does the special email required syntax-->
+            <label for="password">Password:</label>
+            <input name="password" id="password" type="password" placeholder="your password" pattern=".{5,10}"
+                title="5 to 10 characters" required>
+        </div>
+
+
+        <!-- can put Month, Day, Year as options and HTML automatically picks that intial value as the placeholder-->
+
+        <!-- if we didnt want Jan to be sent through rather like 1, in the open option tag we would put value="1"-->
+
+        <div>
+            <label>Birthday:</label>
+            <select name="month">
+                <option>Month</option>
+                <option>Jan</option>
+                <option>Feb</option>
+                <option>Mar</option>
+            </select>
+            <select name="day">
+                <option>Day</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <select name="year">
+                <option>Year</option>
+                <option>1999</option>
+                <option>2000</option>
+                <option>2001</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="agree">I agree to the terms and conditions</label>
+            <input name="agree" id="agree" type="checkbox" required>
+        </div>
+
         <button>Submit</button>
+
     </form>
+
 </body>
 
 </html>
