@@ -1,0 +1,12 @@
+body {
+    background-color: pink;
+}
+
+#special {
+    background-color: yellow;
+}
+
+
+.highlight {
+    text-decoration: line-through;
+}

@@ -1,0 +1,24 @@
+h1 {
+    color: rgba(146, 255, 43, 1);
+    /* border-color:  blue;
+    border-width: 5px;
+    border-style: solid; */
+    border: 5px solid rgba(33, 255, 190, 1);
+
+}
+
+li {
+    color: #4114FF;
+}   
+
+h4 {
+    background: rgba(33, 255, 190, 1);
+}
+
+body { background: pink;
+    /*
+    background: url(https://cdn.pixabay.com/photo/2016/06/25/22/48/grain-1479676_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+/* copy image adress, must hav jpg */
