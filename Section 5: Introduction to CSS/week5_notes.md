@@ -223,3 +223,129 @@ Just like an id, except it is called a class and can be applied to ANY NUMBER of
 
 Can use text-decoration (`text-decoration: line-through`) to style text is css.
 Can add `checked` to start checkboxes checked off when page opens
+
+## Introduction to Chrome Inspector
+
+Right click the click inspect
+
+- can interactively change things
+- can toggle and change CSS too
+- does not change file, only in browser
+- can highlight and click inspect on one piece and it will go to that when inspecting (know exactly where it is)
+- click on magnifying class in inspect, hover over something and then you itll take you to that part of the code
+
+## More Advanced Selectors
+
+We've seen the element, the id and the class selector so far.
+However, there are alot more ways that just that.
+
+### Star
+
+Will select everything on the page
+
+```css
+* {
+}
+```
+
+### Descendant Selector
+
+Want you want to select all the anchor tags `<a href=...>` that are descends of for example and li
+
+- this will select everything that is an anchor tag instead a list tag
+- can be nested by 2 or more tags
+
+```css
+li a {
+}
+```
+
+Can also do something like `li .hello {` if there we wanted to select for a class inside of a tag
+
+### Adjacent Selector
+
+Let us select elements that come after another element, not nested but after, not indented (aka siblings)
+
+- below without the plus it would be all uls inside an h4 but with the plus its all uls that are adjacent to an h4
+
+```css
+h4 + ul  {
+}
+```
+
+### Attribute Selector
+
+Way to select elements based of any attribute (not tag)
+
+- say you wanted to select thins with an href attribute
+  - select all checkboxes or all password fields or all links that are google
+  - we type the attribute we are looking for in the square braces
+  - select every anchor tag with href = to google
+
+```css
+a[href=https://www.google.com] {
+}
+```
+
+```css
+input[type="text"] {
+}
+```
+
+### nth of type
+
+Takes a number and selects every nth of a specific element
+
+- every second li, every 10th paragraph, etc
+  - not every second li but every second li in a given ground
+- aka select the final ul and do something to it
+
+```cs
+ul:nth-of-type(3) {
+}
+```
+
+```cs
+ul:nth-of-type(even) {
+}
+```
+
+## Specificity and the Cascade
+
+Inherience: if we set a property on a parent, it can also effect a child element
+
+- for example if theres an li within a ul, setting the ul red will make the lis within the ul red
+
+Specificity: multiple styles can be affecting the same element
+
+```cs
+body {
+    color: blue;
+}
+
+ul {
+    color: red
+}
+```
+
+- the latter style will effect mask the style of the first one on uls
+  - all uls will be red even though the body is supposed to be blue
+- whatever is more specific, that one will win out
+  - ul wins over body bc ul is more specific
+  - class would win over an ul or an li
+  - id wins over class
+
+Type Selectors are the least specific
+
+- li, li a, li +a 
+  - latter two are more specific (1, 2 ,2)
+
+Class, attribute, and pseduo class are more specifc
+
+- .hello, input[type="text"], input:checked (each of above respectively)
+  - this will be a magnitude of 10x bigger than a single type selector
+
+Most specifc is Id selector
+
+- #special
+  - 10x more specifc that a single class attribute or pseduo class
