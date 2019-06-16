@@ -193,7 +193,7 @@ There are things are CSS selectors.
 
 Then we write:
 
-```cs
+```css
 #special {
     color: green;
 }
@@ -215,7 +215,7 @@ Just like an id, except it is called a class and can be applied to ANY NUMBER of
 - class="highlight"
 - and then just like id we refer to it in css but instead of a # we use a dot (.)
 
-```cs
+```css
 .highlight{
     background: yellow;
 }
@@ -300,12 +300,12 @@ Takes a number and selects every nth of a specific element
   - not every second li but every second li in a given ground
 - aka select the final ul and do something to it
 
-```cs
+```css
 ul:nth-of-type(3) {
 }
 ```
 
-```cs
+```css
 ul:nth-of-type(even) {
 }
 ```
@@ -318,7 +318,7 @@ Inherience: if we set a property on a parent, it can also effect a child element
 
 Specificity: multiple styles can be affecting the same element
 
-```cs
+```css
 body {
     color: blue;
 }
