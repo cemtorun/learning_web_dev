@@ -212,7 +212,7 @@ That selects the one element that matches that ID name.
 
 Just like an id, except it is called a class and can be applied to ANY NUMBER of elements on a page.
 
-- class="highlight"
+- `class="highlight"`
 - and then just like id we refer to it in css but instead of a # we use a dot (.)
 
 ```css
