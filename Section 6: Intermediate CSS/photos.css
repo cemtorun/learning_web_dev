@@ -1,0 +1,15 @@
+img {
+    width: 30%;
+    float: left; /* takes images out of the flow of the document, puts gravity going left, removes white spaces between images, now can add customs spacing */
+    margin: 1.66%; /* each space is 10% and theres 6 lefts and rights total, so each space margin left and right is 1.66% */
+}
+
+h1 {
+    font-family: Raleway;
+    margin-left: 1.66%;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 20px;
+    width: 30%;
+}
+
