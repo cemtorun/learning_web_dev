@@ -133,3 +133,5 @@ p {
     margin: 20px 50px; /* 20 on top and right, 50 on bottom and left */
 }
 ```
+
+Should only really ever be one `h1` on a page.
