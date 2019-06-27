@@ -1,0 +1,22 @@
+table {
+    margin: auto;
+    border: 20px solid lightgrey;
+    width: 50%;
+    margin-top: 40px;
+}
+
+
+h3 {
+    text-transform: uppercase;
+    color: lightseagreen;
+    font-size: 16px;
+}
+
+h1 {
+    color: darkblue;
+}
+
+p {
+    font-family: Raleway;
+}
+
