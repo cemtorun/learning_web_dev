@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid System</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        .pink {
+            background: pink;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <!-- theres 4 different sizes depedning on the size of the broswer that the user is using, (lg, md, sm, xs) and we can define the size we want each column at each of these "breakpoints"-->
+            <!-- if nothing is defined for these breakpoints, each column will take up 12 units once it reaches that breakpoint-->
+            <div class="col-lg-2 col-md-4 pink">COL LG 2 </div>
+            <div class="col-lg-8 col-md-4 pink">COL LG 8 </div>
+            <div class="col-lg-2 col-md-4 pink">COL LG 2 </div>
+        </div>
+        <!-- for this row below, we are trying to do a 4,4,2,1 breakpoint split-->
+        <!--dont need to define col-xs-12 but doesnt really matter -->
+        <!--if we dont explicitlly set the large, bootstrap assumes its the same as the medium, the first div within does the same thing as the rest-->
+        <div class="row">
+            <div class="col-md-3 col-sm-6 pink">C1</div>
+            <!-- say in this grid we want to split this column into a left side and a right side, we can this this by nesting grids.-->
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pink">
+                <div class="row">
+                    <div class="col-lg-6 pink">nest1</div>
+                    <div class="col-lg-6 pink">nest2</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pink">C3</div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pink">C4</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
