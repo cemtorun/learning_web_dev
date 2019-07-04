@@ -1,5 +1,7 @@
 # Section 7: Bootstrap
 
+Note: this chapter uses the 3rd version of bootstrap and not the 4th. Next units will use the 4th.
+
 ## What is Bootstrap
 
 HTML, CSS and JS framework for developing responsive, mobile first projects on the web.
@@ -56,5 +58,30 @@ Forms:
 
 ## Nav Bar
 
+Nav bar super important for everything.
+Bootstrap semantics is not very descriptive. Alot of the variables and their meanings don't really relate to what it does. Semantic UI is a framework that helps with that but not as widely used.
+Hamburger menu is like the stack icon you can click to see the entire navbar options vertically.
+
+The dropdown and the hamburger, if you want to click it you also need js so you need to either get that file or include it as a src file. To use js we also need jQuery, so we now have to include that cdn in the html.
+
+- the cdn for jQuery needs to come before the cdn to the bootstrap js because the js relies on jQuery
+
+**When making a navbar just copy the bootstrap one, and then play around with it and remove things you dont want and add additional pieces you do want.**
 
 ## The Grid System
+
+Number one reason people use bootstrap.
+
+Acts as the skeleton of our entire application.
+Let's use divide the width of the screen into pieces and pick how many pieces we want our elements to take up.
+
+Every container in bootstrap can be divided into 12 different columns. Using the grid system, we can pick how many of those 12 units each element should take up.
+
+- any time we use the grid system in bootstrap we need to define it within a container as a class inside a div.
+
+Summary:
+
+- 12 units per row (can nest to get more)
+- 4 sizes(lg, md, sm, xs)
+  - create breakpoints that make stuff responsive by reassigning at any of the breakpoints
+  - mobile is stacked 1 over another usually, looks best b/c phone is small width
