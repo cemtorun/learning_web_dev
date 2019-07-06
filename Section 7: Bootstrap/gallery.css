@@ -1,5 +1,5 @@
 body {
-    padding-top: 70px
+    padding-top: 70px;
 }
 /* need to add padding to the top of the body to make sure nav bar doesnt hit jumbotron, instead give it some spacing, this was ok until we fixed the navbar, w/o fixed nav bar we dont need padding. */
 
@@ -23,3 +23,5 @@ body {
 .navbar-inverse .navbar-brand {
     color: white;
 }
+
+
