@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Purrfect Match</title>
+    <!-- <link rel="stylesheet" href="./css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="landing.css">
+    <!-- make sure that cdn for bs css is the same version as the cdn for bs js-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- remember jQuery cdn must come before JS cdn-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9ed7150226.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!--centers the things inside the container a bit more-->
+            <div class="navbar-header">
+                <!-- we put the hamburger below, (button below) before the brand tag, but inside the navbar-header class within the div-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <!-- the data-target attribute links to the data we want to collaspe in the div below with the class collaspe navar-collaspe. this data-target links to the id below, the data target has a # but the id below doesnt have the #, # is used to target an id just like in css-->
+                    <span class="sr-only">Toggle navigation</span>
+                    <!-- the hamburger is not an image, its a span thats being style to look like those bars-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">
+                    Purrfect Match
+                </a>
+            </div>
+            <!-- now this div that contains collaspe will be hidden once mobile size is reached.
+                    this just makes it so it collapses, doesnt give the hamburger.-->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- this id attribute tells html what is going to be within the hamburger when its created above, hwoever down here theres no #-->
+                <!-- anything thats moved outside this collaspe div wont go away if the screen shrinks and wont be include in the hamburger, itll remain on the page like normal-->
+                <ul class="nav navbar-nav">
+                    <!-- active class just makes it be the one thats highlighted a little when the page is intially opened  -->
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">Sign Up <i class="fas fa-user-plus"></i></a>
+                        <!-- putting within the anchor tag, or else it just goes to a random spot.-->
+                    </li>
+                    <li>
+                        <a href="#">Login <i class="fas fa-user"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- BODY -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="content">
+                    <h1>Purrfect Match</h1>
+                    <h3>The Only Human-Feline Dating App</h3>
+                    <hr>
+                    <button class="btn btn-default btn-lg">
+                        <i class="fas fa-paw"></i>
+                        Get Started!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="row">
+        <div class="col-lg-12">
+            <img
+                src="https://images.unsplash.com/photo-1496284427489-f59461d8a8e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
+        </div>
+    </div> -->
+
+
+
+</body>
+
+</html>

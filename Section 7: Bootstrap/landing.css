@@ -1,0 +1,49 @@
+.navbar {
+    background: #DDDDDD;
+}
+
+
+a {
+    color: #777777;
+}
+
+#content {
+    padding-top: 25%;
+    /* better to use % rather than a pixel amount in order to make it more responsive */
+    text-align: center;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),   
+                 0px 8px 13px rgba(0, 0, 0, 0.1),
+                 0px 18px 23px rgba(0, 0, 0, 0.1);
+    /* x offset, y offset, blur radius, color */
+}
+
+hr {
+    line-height: 20px;
+    border-color: white;
+    width: 400px;
+    
+}
+
+body {
+    background: url(https://images.unsplash.com/photo-1531702923339-1f58c5185402?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80);
+    /* bg-size wont skew the image at all but it will strech the image in any way to cover the entire screen, it will shrink or grow the image to fit the background w/o changing aspect ratio */
+    background-size: cover; 
+    background-position: center;
+    /* (usually helps if image is larger usually)*/
+    /* but also helps when shrinking screen size to keep the image in the middle and not just zoom into left half of image when resizing browser */
+
+    font-family: lato;
+    color: white;
+    /* color only affects the h1 and h3 because everything else has more specific labels defined by bootstrap so since h1 and h3 are simple, and we made them, they become white but other font doesnt */
+}
+
+h1 {
+    font-weight: 700; /* uses the lato bold*/
+    font-size: 5em; 
+}
+
+
+html {
+    height: 100%; 
+    /* body takes the dimensions of html so if we add this then we wont get the background image repeating */
+}
