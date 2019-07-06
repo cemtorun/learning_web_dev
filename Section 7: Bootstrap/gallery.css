@@ -1,0 +1,25 @@
+body {
+    padding-top: 70px
+}
+/* need to add padding to the top of the body to make sure nav bar doesnt hit jumbotron, instead give it some spacing, this was ok until we fixed the navbar, w/o fixed nav bar we dont need padding. */
+
+.jumbotron {
+    color: #2c3e50;
+    background: #ecf0f1;
+}
+
+.navbar {
+    background: #2c3e50;
+}
+
+/* this tag is very specfic so to change it cant do just a .navbar and change the color, we need something just as specific in order to change so we can get the css from inspect element and change via that way, ours some second compared to bootstrap styles because ours comes second in html */
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+/* and do the same for the brand one, must overwrite*/
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}

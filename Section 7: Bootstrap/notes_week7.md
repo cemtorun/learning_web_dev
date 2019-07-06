@@ -85,3 +85,7 @@ Summary:
 - 4 sizes(lg, md, sm, xs)
   - create breakpoints that make stuff responsive by reassigning at any of the breakpoints
   - mobile is stacked 1 over another usually, looks best b/c phone is small width
+
+Creating a div with class thumbnail is CRUCIAL for keeping images within the bounds that you want them to be in. W/o it the image will just take up whatever size it is. Thumbnail class within a div makes sure it is the same size as the column that comes before it.
+
+Font awesome is a library that has bare icons, way more than bootstrap.

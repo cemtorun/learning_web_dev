@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Galery</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="gallery.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9ed7150226.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <!--navbar-inverse makes it dark navbar-->
+        <div class="container">
+            <!--centers the things inside the container a bit more-->
+            <div class="navbar-header">
+                <!-- we put the hamburger below, (button below) before the brand tag, but inside the navbar-header class within the div-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <!-- the data-target attribute links to the data we want to collaspe in the div below with the class collaspe navar-collaspe. this data-target links to the id below, the data target has a # but the id below doesnt have the #, # is used to target an id just like in css-->
+                    <span class="sr-only">Toggle navigation</span>
+                    <!-- the hamburger is not an image, its a span thats being style to look like those bars-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">
+                    <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                    Images
+                </a>
+            </div>
+            <!-- now this div that contains collaspe will be hidden once mobile size is reached.
+                    this just makes it so it collapses, doesnt give the hamburger.-->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- this id attribute tells html what is going to be within the hamburger when its created above, hwoever down here theres no #-->
+                <!-- anything thats moved outside this collaspe div wont go away if the screen shrinks and wont be include in the hamburger, itll remain on the page like normal-->
+                <ul class="nav navbar-nav">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>
+                <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+                Image Gallery
+            </h1>
+            <p>Welcome to my gallery of images!</p>
+        </div>
+
+        <div class="row">
+            <!-- dont need col-md-6, col-sm-6 makes md also 6-->
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <!-- this class thumbnail is crucial for scaling the image down such that it fits inside the column size that we defined-->
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <!-- this class thumbnail is crucial for scaling the image down such that it fits inside the column size that we defined-->
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <!-- this class thumbnail is crucial for scaling the image down such that it fits inside the column size that we defined-->
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <!-- this class thumbnail is crucial for scaling the image down such that it fits inside the column size that we defined-->
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <!-- this class thumbnail is crucial for scaling the image down such that it fits inside the column size that we defined-->
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <!-- this class thumbnail is crucial for scaling the image down such that it fits inside the column size that we defined-->
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <!-- this class thumbnail is crucial for scaling the image down such that it fits inside the column size that we defined-->
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <!-- this class thumbnail is crucial for scaling the image down such that it fits inside the column size that we defined-->
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <!-- this class thumbnail is crucial for scaling the image down such that it fits inside the column size that we defined-->
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
