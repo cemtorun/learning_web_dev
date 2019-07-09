@@ -1,0 +1,51 @@
+
+body {
+    background-color: #f5d9df;
+    font-family: Nunito, sans-serif;
+}
+
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#mainNavbar .nav-link{
+    color: white;
+}
+
+#mainNavbar .navbar-brand {
+    color: #ea1c2c;
+    font-size: 1.5rem;
+}
+
+#mainNavbar .nav-link:hover{
+    color: #ea1c2c;
+}
+/* img {
+    max-width:450px;
+    max-height:450px;
+} */
+
+.navbar .navbar-expand-lg .navbar-light {
+    background-color: pink;
+}
+
+#headingGroup span{
+    color: #ea1c2c;
+}
+
+#headingGroup h1 {
+    font-weight: 100;
+    font-size: 4rem;
+}
+
+/* MEDIA QUERY */
+/* at 1200px, we are going to change font size of the h1s inside the heading group */
+/* need both the font size and weight here, because we changed them above, we need to reassign both again */
+@media (max-width: 1200px) {
+    #headingGroup h1 {
+        font-size: 3rem;
+        font-weight: 100;
+    }
+}
+

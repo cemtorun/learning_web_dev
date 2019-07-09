@@ -1,28 +1,84 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="app.css">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Museum of Candy</title>
-  </head>
-  
-  <body>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    
-  </body>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="app.css">
+
+  <title>Museum of Candy</title>
+</head>
+
+<body>
+
+  <!-- data-target targets the thing with the same id so it knows what will be collasped-->
+  <!-- aria helps with screen readers for the blind-->
+
+  <nav id="mainNavbar" class="navbar navbar-expand-md navbar-dark py-0 fixed-top">
+    <a class="navbar-brand" href="#">CANDY</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navLinks">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">ABOUT</a>
+        <a class="nav-item nav-link" href="#">TICKETS</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- fluid container is just like a container, we need one or the other for grid system, fluid container just doesnt center the text like a normal container does-->
+
+  <section class="container-fluid px-0">
+    <!-- container fluid as a bit of padding on left and right so px-0 fixes that-->
+
+    <div class="row align-items-center ">
+
+      <div class="col-lg-6">
+        <!-- makes it so the the text is gone, then at lg and above its there-->
+        <div id="headingGroup" class="text-center text-white d-none d-lg-block mt-5">
+          <h1 class="display-2">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
+          <h1 class="display-2">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
+          <h1 class="display-2">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
+          <h1 class="display-2">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
+          <h1 class="display-2">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
+          <h1 class="display-2">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <!-- img-fluid is a bootstrap class to make images responsive, it changes max-width to 100% and height to auto, makes it so the images scale down at different sizes-->
+        <img class="img-fluid" src="imgs/hand2.png">
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+</body>
+
 </html>
