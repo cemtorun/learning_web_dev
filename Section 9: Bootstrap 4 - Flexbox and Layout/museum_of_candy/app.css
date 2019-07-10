@@ -36,7 +36,7 @@ body {
 
 #headingGroup h1 {
     font-weight: 100;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 /* MEDIA QUERY */
@@ -49,3 +49,26 @@ body {
     }
 }
 
+.blurb h2 {
+    color: #ea1c2c;
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+.blurb p {
+    color: #da6890;
+    font-weight: 100;
+    font-size: 1.125rem;
+    line-height: 2;
+}
+
+.content {
+    margin-top: 70px;
+} 
+
+/* a class that makes the background purple when user scrolls */
+
+.navbar.scrolled {
+    background: rgb(231, 172, 231);
+    transition: background 1s; /* adds a delay/transition  */
+}
