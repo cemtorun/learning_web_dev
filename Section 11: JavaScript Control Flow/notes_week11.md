@@ -118,3 +118,26 @@ while (count < str.length){
 An infinite loop occurs when the terminating condition never returns false.
 
 - the while(condition) {
+
+str.IndexOf("w") will return the index of the string w is it in is the value of str.
+
+- if you put in a word, it says at what index the word starts at
+- if the word or character does not exist, it returns -1
+
+## For Loops
+
+```js
+for (init; condition; step) {
+    // run some code
+}
+```
+
+init for intialize.
+
+```js
+for (var count = 0; count < 6; count++) {
+    console.log(count)
+}
+```
+
+Variable count only exists inside the for loop, for while loops we have to initialize the variable count before we start the while loop
