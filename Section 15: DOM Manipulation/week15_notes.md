@@ -114,6 +114,55 @@ The document comes with a bunch of elements for selecting elements.
 
 ## Manipulating Style
 
+We just saw how to select elements. Now let's how to manipulate them.
+
+When the DOM is constructed and an object is made for every single element, there is a property of that element withing the document called style.
+
+- the style property is a huge object with hundreds of properties
+- the right side must be a string, in css you dont but in js we need to
+- if we it to happen when page loads we use css/html, but if its when the user clicks of scrolls then we need to do that in js
+- html for structure
+- css for presentation
+- JS for behavior
+
+```js
+var tag = document.getElementById("highlight")
+
+// manipulate
+tag.style.color = "blue";
+tag.style.border = "10px solid red";
+tag.style.fontSize = "70px";
+tag.style.background = "yellow";
+tag.style.marginTop = "200px";
+```
+
+A good practice is that instead of directly manipulating style with JS, we can define a CSS class and then toggle it on or off with JS. Thats the correct way to do it.
+
+![Screen Shot 2019-07-16 at 11 21 23 AM](https://user-images.githubusercontent.com/42192106/61307179-dffaf680-a7bb-11e9-9f40-02dd904651ad.png)
+
+Class list is pretty cool:
+
+First we select some class in from html called another-class then from css we select (with .another-class) then we give it styles border color: green.
+
+- if you do classList on that object, it will initally have no classes assigned to it
+- then we can play with this with the methods below
+
+```js
+- `tag.classList.add(".another-class")` // add a class
+- `tag.classList.remove(".another-class)` // removes a class
+- `tag.classList.toggle(".another-class)` // toggle, if it has remove, if it doesnt then remove, SO USEFUL!
+```
+
+Super important, for good practice and for ease.
+
+- its okay to asign in JS if its for 1 or 2 styles but if we changing alot of things its better to define all those changes in the css, then apply that class through JS when needed
+- **toggle is so useful make sure to use it**
+
+classList is NOT an array, its a read only list that contains the classes for a given element
+
+- we have to use .add and .remove, we cant do stuff like pop or push
+
+
 ## Manipulating Text and Content
 
 ## Manipulating Attributes
