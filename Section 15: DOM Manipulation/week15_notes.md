@@ -156,13 +156,73 @@ First we select some class in from html called another-class then from css we se
 Super important, for good practice and for ease.
 
 - its okay to asign in JS if its for 1 or 2 styles but if we changing alot of things its better to define all those changes in the css, then apply that class through JS when needed
+- if changing 1 property at a time its ok to do in JS but if its a batch put it in CSS then call the class, and turn that class on or off
 - **toggle is so useful make sure to use it**
 
 classList is NOT an array, its a read only list that contains the classes for a given element
 
 - we have to use .add and .remove, we cant do stuff like pop or push
 
-
 ## Manipulating Text and Content
 
+We've seen how we can change the color or any style properties and how we can use the classList to effect styling.
+
+Here we will talk about 2 properties which also us to change the text or html on a page
+
+- the first one is the property textContent: Returns a string of all the text contained in a given element
+  - text is defined as anything b/w html tags but not including the tags within it, only the text, however many layers that might be
+- the next one is innerHTML: similar to textContent, except it returns a string of all the HTML contained in a given element
+  - it keeps at the HTML elements in tack, maintains the strucutre of the html elements along with the text
+  - usually dont set innerHTML value to something new, b/c its the same problem as textContent, completely overwrites it
+
+**If you reassign/update text, if you can nest tags into innerHTML to update something and it will have the new tag but with textContent, it treats the tags as text so it will add as part of the string and not as a tag.**
+
+```html
+<p> This is an <strong>awesome</strong> paragraph </p>
+```
+
+```js
+var tag = document.querySelector("p"); // we select the pargraph with the querySelctor
+
+// retrieve the text content
+tag.textContent; // this gets the entire "this is an awesome paragraph" text
+
+// alter the content
+tag.textContent = "blah blah blah"; // changes the text content to blah blah blah
+// this just like this will remove the strong tag, it gets overwritten, gotta be careful
+```
+
+```js
+var tag = document.querySelector("p");
+tag.innerHTML // returns: This is an <strong>awesome</strong> paragraph
+```
+
 ## Manipulating Attributes
+
+We can use getAttribute() and setAttribute() to read and write attributes like src or href.
+
+- works on any attribute like and id or a class, attributes are the things with equals inside tags
+
+```html
+<a href="www.google.com">I am a link</a>
+<img src="logo.png">
+```
+
+```js
+var link = document.querySelector("a");
+link.getAttribute("href"); // www.google.com
+//change href attribute
+link.setAttribute("href", "http://www.dogs.com"); // <a href="www.dogs.com">I am a link</a>
+// w/o http its a relative site on desktop, http makes it search the real web
+// to change img src
+var img = document.querySelector("img");
+img.setAttribute("img", "corgi.png"); // <img src="corgi.png">
+```
+
+- srcset attribute to change img src on google instead of src
+- https more secure than http
+- can change dimensions with name.style.width and name.style.height
+- can add borders too
+- can also loop through all the anchor tags and change the href for example
+  - can use forEach b/c its not a real array
+  - do with for loop, pretty straight forward
