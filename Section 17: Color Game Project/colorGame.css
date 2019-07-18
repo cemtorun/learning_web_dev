@@ -1,0 +1,89 @@
+body {
+    background-color: #232323;
+    margin: 0;
+    font-family: "Avenir";
+}
+
+.square {
+    width: 30%;
+    background: purple;
+    padding-bottom: 30%;
+    float: left;
+    /* The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. makes blocks inline instead of each taking new line in this case */
+    margin: 1.66%;
+    border-radius: 15%;
+    transition: background 0.5s; 
+    /* only transition when the backgorund changes, no other property has transition */
+    -webkit-transition: background 0.5s; 
+    -moz-transition: background 0.5s;
+     /* these two are do add browser consitency bc transitions are always built into every browser
+     called browser prefixes */
+
+}
+
+#container {
+    max-width: 600px;
+    margin: 0 auto;
+    /* gives us 0 margin on top and bottom but auto of left and right which centers it */
+}
+
+h1 {
+    color: white;
+    line-height: 1.1;
+    text-align: center;
+    background: steelblue;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 20px 0; /* top and bottom 20px, left and right 0 */
+}
+
+#stripe {
+    background-color: white;
+    height: 30px;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.selected {
+    background: steelblue;
+    color: white;
+}
+
+#colorDisplay {
+    font-size: 200%; /* 200% of h1 font size */
+}
+
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 0.5s; /* animates transiton for all changes in a button property*/
+    -webkit-transition: all 0.5s; 
+    -moz-transition: all 0.5s;
+    outline: none;
+}
+
+#message {
+    display: inline-block;
+    width: 20%;
+}
+
+button:hover{
+    background: steelblue;
+    color: white;
+}
+
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+  }
