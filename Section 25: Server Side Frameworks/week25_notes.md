@@ -71,7 +71,7 @@ app.listen(3000, function () {
 
 ## The Package.json
 
-What does the package.json file do?
+### What does the package.json file do
 
 - everysingle npm package has a file called package.json
   - json: javascript object notation
@@ -82,15 +82,69 @@ What does the package.json file do?
 - package.json describes what is need to run the package instead of just sending all libaries and packages require to run the main package
 - depencies are the most important part of the package.json
 
-What does the `--save` mean?
+### What does the `--save` mean
 
 - it will take the package name and version and save it into the package.json file if we have one.
 - it installs it and takes a libary/framework and just saves/adds it to a the package.json in your directory if there is not one
 - this is good for when we are creating our own web apps to make a list of depencies that the web app depends on
+- can add this flag to any package when installing to add to package.json
 
-npm init
+### npm init
 
 - helps you create a package.json file, interactively
 - we will create our own package.json outlining the frameworks/libaries we needed
 
+### Nodemon
+
+Don't have to restart server everytime you change to one of the backend files.
+
+- run nodemon app.js instead of node.js
+- `npm i -g nodemon` to install
+  - install global (on server on goorm)
+- it automatically restarts server when you save the backend file
+
 ## Route Params
+
+### Splat or start route matcher (*)
+
+If we want to have a catch all that redirects the user to a page when the url doesnt exist
+
+```js
+// runs when the app gets a get request to any url besides /, /bye, and /dog
+app.get("*", function(req,res){
+    res.send("site does not exist ggwp");
+});
+```
+
+Order of routes matters, this catch all must come last. The rule is the first route that matches a given request is the only route that will be run.
+
+- 1 request = max 1 run.
+- "*" is like else, its that catch all condition
+- its like 1 big if statement
+
+### Route Parmas
+
+Instead of defining a route for every single url, we could define a pattern.
+
+- reddit has thousands of subreddits and it would be very repetitive just to have /r/soccer, /r/fitness, written a thousand times
+- we can use route parameters or route variables to match patterns, also called path variables
+
+```js
+// This colon tells express not actually character for character subredditName but rather to make it a pattern looking for /r/ then any subreddit name
+app.get("/r/:subreddit", function(req, res){
+    res.send("Welcome to my subreddit!");
+});
+//Put a colon in front of anything we want to be a variable.
+//The number of "/" must match what we are listening for
+```
+
+How do we access this data from the route handler?
+
+```js
+app.get("/r/:subredditName", function(req, res){
+// req contains all the info about the incoming request, can use it to access the req
+// params object contains all the parameters given and their corresponding values (req.params to console.log)
+    var subreddit = req.params.subredditName;
+    res.send("Welcome to the " + subreddit + " subreddit!");
+});
+```
