@@ -80,7 +80,7 @@ there are two different types of tags in EJS (third we we will later)
 - <%= %>
   - the equal sign makes it so whatever is returned is added to the html
 - <% %>
-  - this logic is purely logic, we dont want the if (X=5) to be added to the html
+  - this logic is purely logic, we dont want the `if(x=5)` to be added to the html
   - this isnt supposed to display
   - dont want brackets in the html and random stuff like that
   - if statements and loops we dont use the equal sign
@@ -119,3 +119,59 @@ there are two different types of tags in EJS (third we we will later)
 ```
 
 ## Serving Custom Assets
+
+### How to include public assets
+
+Can include style tages on certain pages, like changing body on a certain template to purple
+
+- this works but its not the right way to do it
+- have to do in all templates (ejs) files to have it on all pages
+- two main uses: code in being repeated, and 2, we are using the style tag
+  - want to use external sytyle sheet
+
+`<link rel="stylesheet" href="app.css">`
+
+When we start a web server with express, it doesnt automatically know that this css file or any other file should be incorperated.
+
+- to search for views directory but anything else isnt
+
+`app.use(express.static("public"));`
+
+- this line tells express to serve the contents of the public directory
+
+Now we can just copy this link tag and put it on any ejs pages where we want this css to be applied.
+
+- can have multiple stylesheets and have different pages link to different styles sheets
+- all just must be in the public directory
+
+Small thing:
+
+- we can also tell express we will be using ejs so we dont have to have .ejs at the end of the file names
+- `app.set("view engine, ejs");`
+
+## Using partials to dry up our code
+
+We also don't have the general html boilerplate on every ejs file, but we dont want to just type it on every page
+
+We can use partials which are just files that we can write and include in other templates.
+
+- we make a new directory inside views and call it partials
+- then we make a header.ejs and footer.ejs where we just copy paste the general header and foot html doctype
+- we use these on the pages were we want the template/partials
+  - `<% include partials/header %>`
+  - `<% include partials/footer %>`
+- now we can put the style tag `<link rel="stylesheet" href="app.css">` inside this header.ejs
+- BUT WE need to make it /app.css for the css to apply
+- / makes it so that it looks for app.css in the same directory, we want it too look for in root directory
+- bc app.css is in public but the header is is one folder deeper so we need to go back to route to access app.css
+- partials great for re-using code, can use for navbar or any elements you want repeated across many pages
+
+## Post Requests
+
+We write post routes with app.posts().
+
+npm install body-parser --save to install body-parser.
+
+res.redirect() key.
+
+See project for examples.
