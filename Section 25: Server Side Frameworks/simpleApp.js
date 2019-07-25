@@ -2,7 +2,9 @@
 // 1. make npm init, entry point app.js
 // 2. Make app.js
 // 3. install express (with npm install express --save, downloads and adds to dependencies)
+// install ejs too with --save flag too
 // 4. open app.js and require express and execute to variable called app
+// add the view enginge
 // 5. set up the listen and bingo (tells express + the app to listen on a particular port)
 
 var express = require("express");
