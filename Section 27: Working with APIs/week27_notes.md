@@ -84,5 +84,45 @@ request('http://www.google.com', function (error, response, body) {
 });
 ```
 
+Const for any variable you dont need to later change instead of var.
 Running all the above gives us the html from google.
 We can put an API link instead of google and get the response from an API.
+
+## JSON Placeholder API Example
+
+Note: %20 encodes a space in a url
+
+If theres no error we want to console.log the property
+What we get back isn't a JS object. Rather it is a string.
+
+- `typeof body = string`
+- need to turn it into an object, JS as a built in way to do this, then save to a variable
+  - `var parsedData = JSON.parse(body)`
+  - this also formats the data like a object rather than a string
+- now we can access within the object with: `parsedData["firstLayer"]["secondLayer"]["etc"]`
+- we can also use the . sytax like `parsedData.l1.l2.etc`
+
+Can also parse json in the url by entering the keys for the layers.
+
+```js
+const request = require('request');
+request('https://jsonplaceholder.typicode.com/users/1', function (error, response, body) {
+    console.error('error:', error);
+    console.log('statusCode:', response && response.statusCode);
+    const parsedData = JSON.parse(body);
+    console.log(parsedData.name + " lives in " + parsedData.address.city);
+    /// another way for concatentation, embedd dynamic variables in string, method is called template literal
+    console.log(`${parsedData.name} lives in ${parsedData.address.city}`);
+});
+```
+
+Const is also ES6 with template litteral. New things not include are promises and arrow function.
+
+## Summary
+
+Download and save all depencies:
+
+- npm install --save express ejs request
+- question mark in query string starts query, then we can say `?s=star&tomatoes=true` to change query
+  - look at documentation of APIs to figure out how to use
+  
