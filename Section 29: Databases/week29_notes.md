@@ -89,6 +89,8 @@ CRUD: create, read, update, destroy
 
 The mongo console is nice but we will write most of our code to interact with db is inside of our express  code within JS.
 
+Mongoose is an ODM, object data mapper. It is a way for us to write JS inside our JS files where that JS will interact with our db. JS layer on top of mongodb.
+
 Mongoose is mongodb object modeling for node.js
 
 - it is package we download that lets us interact with mongodb inside of our JS files.
