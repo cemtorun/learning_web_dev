@@ -16,3 +16,20 @@ A table of all 7 RESTful routes
 Index and show are read routes.
 New and create are create routes (one is get other is post req).
 Edit and update are update routes.
+Update is a PUT request (another HTTP verb).
+
+## Folder Traversal
+
+Also, if you're confused on how to traverse folders using the following syntaxes: ./, ../, and /, then see below:
+
+/ means go back to the root folder, then traverse forward/downward.
+
+./ means begin in the folder we are currently in (current working directory) and traverse forward/downward in the tree.
+
+../ means go up one directory, then begin the traverse.
+
+## Misc
+
+<%-  %>   // THIS RUNS something as code
+
+- can be used to allow user to put in html through input
