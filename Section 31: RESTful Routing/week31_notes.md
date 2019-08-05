@@ -58,3 +58,6 @@ Santizing inputs allows users not to input scripts into inputs.
 
 Thanks for the help Don, but <%- isn't very bad. It can be dangerous if you don't use express-sanitizer due to script injection, but with express-sanitizer we don't have to worry about that. Without <%- any inserted HTML won't render correctly (e.g., `<strong>`  tags, etc.).
 
+## HTTP Verbs with Mongoose Methods
+
+![Screen Shot 2019-08-05 at 1 02 20 PM](https://user-images.githubusercontent.com/42192106/62481764-5d91a100-b781-11e9-9ac2-a4e905ff361a.png)
