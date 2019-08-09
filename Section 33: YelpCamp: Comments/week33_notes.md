@@ -38,3 +38,5 @@ Skipped the styling part: see on github.
 <https://github.com/nax3t/webdevbootcamp/tree/master/YelpCamp>
 
 Where v5 is the styled version.
+
+__dirname, to get director that a file is run in, used for adding stylesheets to be safe
